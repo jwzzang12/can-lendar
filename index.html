@@ -8,8 +8,7 @@
     <link rel="icon" href="" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
@@ -29,62 +28,63 @@
       <h1 class="mainTitle">Can-lendar Generator</h1>
     </header>
     <main id="main">
-      <div id="preview">
-        <div id="previewBox">
-          <div class="background"></div>
-          <h3 id="monthTxt"></h3>
-          <table class="table-calendar" id="calendar" data-lang="en">
-            <thead id="thead-month"></thead>
-            <tbody id="calendar-body"></tbody>
-          </table>
-        </div>
-      </div>
-      <div class="generator">
-        <div class="wrapper">
-          <div class="container-calendar">
-            <div class="button-container-calendar">
-              <button id="previous" onclick="previous()">&#8249;</button>
-              <div class="footer-container-calendar">
-                <label for="month">Jump To: </label>
-                <select id="month" onchange="jump()">
-                  <option value="0">Jan</option>
-                  <option value="1">Feb</option>
-                  <option value="2">Mar</option>
-                  <option value="3">Apr</option>
-                  <option value="4">May</option>
-                  <option value="5">Jun</option>
-                  <option value="6">Jul</option>
-                  <option value="7">Aug</option>
-                  <option value="8">Sep</option>
-                  <option value="9">Oct</option>
-                  <option value="10">Nov</option>
-                  <option value="11">Dec</option>
-                </select>
-                <select id="year" onchange="jump()"></select>
-              </div>
-              <button id="next" onclick="next()">&#8250;</button>
-            </div>
+      <div id="canMaker">
+        <div id="preview">
+          <div id="previewBox">
+            <img src="img/Untitled_Artwork.png" alt="" />
+            <h3 id="monthTxt"></h3>
+            <table class="table-calendar" id="calendar" data-lang="en">
+              <thead id="thead-month"></thead>
+              <tbody id="calendar-body"></tbody>
+            </table>
           </div>
         </div>
-        <div class="colorPick">
-          <ul>
-            <li>
-              <div>Main Color</div>
-              <input type="color" id="mainColor" value="#0000ff" />
-            </li>
-            <li>
-              <div>Font Color</div>
-              <input type="color" id="fontColor" value="#0000ff" />
-            </li>
-            <li>
-              <div>Calendar Color</div>
-              <input type="color" id="bodyColor" value="#0000ff" />
-            </li>
-          </ul>
-
-          <input type="button" onclick="getInputValue();" value="Generate" />
+        <div class="generator">
+          <div class="wrapper">
+            <div class="container-calendar">
+              <div class="button-container-calendar">
+                <button id="previous" onclick="previous()">&#8249;</button>
+                <div class="footer-container-calendar">
+                  <label for="month">Jump To: </label>
+                  <select id="month" onchange="jump()">
+                    <option value="0">Jan</option>
+                    <option value="1">Feb</option>
+                    <option value="2">Mar</option>
+                    <option value="3">Apr</option>
+                    <option value="4">May</option>
+                    <option value="5">Jun</option>
+                    <option value="6">Jul</option>
+                    <option value="7">Aug</option>
+                    <option value="8">Sep</option>
+                    <option value="9">Oct</option>
+                    <option value="10">Nov</option>
+                    <option value="11">Dec</option>
+                  </select>
+                  <select id="year" onchange="jump()"></select>
+                </div>
+                <button id="next" onclick="next()">&#8250;</button>
+              </div>
+            </div>
+          </div>
+          <div class="colorPick">
+            <ul>
+              <li>
+                <div>Main Color</div>
+                <input type="color" id="mainColor" value="#0000ff" />
+              </li>
+              <li>
+                <div>Font Color</div>
+                <input type="color" id="fontColor" value="#0000ff" />
+              </li>
+              <li>
+                <div>Calendar Color</div>
+                <input type="color" id="bodyColor" value="#0000ff" />
+              </li>
+            </ul>
+            <input type="button" onclick="getInputValue();" value="Generate" />
+          </div>
+          <button class="downloadBtn">Save Image</button>
         </div>
-        <button class="downloadBtn">Save Image</button>
       </div>
     </main>
   </body>
